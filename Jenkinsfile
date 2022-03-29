@@ -13,6 +13,7 @@ pipeline {
 			   sh "git secrets --install -f "
                            sh "git secrets --register-aws"
 			   sh "git secrets --add 'MyPASSWORD[0-9]+'"
+			   sh "git secrets --add 'aws_secret_access_key'"
 			   sh "git secrets --list"
 	                   sh "git secrets --scan -r ."
 	                }
