@@ -13,6 +13,7 @@ pipeline {
 			   sh "git secrets --install -f "
                            sh "git secrets --aws-provider"
 			   sh "git secrets --add '(ACCESS|access|Access)'"
+			   sh "git secrets --list"
 	                   sh "git secrets --scan -r ."
 	                }
 	        }
