@@ -8,7 +8,7 @@ pipeline {
 	       }
 	    stage('git-secrets-check') {
 	         steps {
-                           
+                        echo 'Scan'   
 	                }
 	        }
     
