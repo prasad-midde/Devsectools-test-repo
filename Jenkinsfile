@@ -18,10 +18,14 @@ pipeline {
     
     stage('hadolint-scan') {
 	         steps {
-	       sh 'pwd'
-	       sh 'ls'
+	       echo "#######"	 
                echo 'Docker linting/vulnerability scan using hadolint'
                sh 'docker run --rm -i hadolint/hadolint < Dockerfile'
+	       echo "#######" 
+	      }
+	    }
+     stage('checkov-scan') {
+	         steps {
 	       echo "#######"
                echo 'Checking the quality of the code using checkov'
                sh 'checkov -f ./Dockerfile'
@@ -29,7 +33,6 @@ pipeline {
 	       
 	      }
 	    }
-    
 	
 	}
 	}
