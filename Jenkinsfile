@@ -11,7 +11,7 @@ pipeline {
 	         steps {
                            sh "git init"
 			   sh "git secrets --install -f "
-                           sh "git secrets --aws-provider"
+                           sh "git secrets --register-aws"
 			   
 			   sh "git secrets --list"
 	                   sh "git secrets --scan -r ."
