@@ -11,6 +11,7 @@ pipeline {
                            sh "git init"
 			   sh "git secrets --install -f "
                            sh "git secrets --aws-provider"
+			   sh "git secrets --add '("|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)("|')?\s*(:|=>|=)\s*("|')?[A-Za-z0-9/\+=]{40}("|')?'"
                            sh "git secrets --list"
 	                   sh "git secrets --scan -r ."
 	                }
