@@ -15,7 +15,7 @@ pipeline {
     stage('hadolint-scan') {
 	         steps {
                echo 'Docker linting/vulnerability scan using hadolint'
-               sh 'docker run --rm -i hadolint/hadolint < ./Dockerfile'         
+               sh 'docker run --rm -i hadolint/hadolint < Dockerfile'         
 	      }
 	    }
     
