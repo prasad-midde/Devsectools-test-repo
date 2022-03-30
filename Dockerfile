@@ -17,6 +17,6 @@ COPY . .
 
 EXPOSE 3000
 #HEALTHCHECK --interval=5s --timeout=3s 
-#HEALTHCHECK NONE
+HEALTHCHECK NONE
 CMD [ "node", "index.js" ]
 USER node
