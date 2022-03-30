@@ -12,7 +12,6 @@ pipeline {
                            sh "git init"
 			   sh "git secrets --install -f "
                            sh "git secrets --register-aws"
-			   sh "git secrets --add 'AWS_ACCESS_KEY'"
 			   sh "git secrets --list"
 	                   sh "git secrets --scan -r ."
 	                }
